@@ -192,6 +192,5 @@ class Triangle:
 sq = Square()
 tri = Triangle()
 
-new_line()
-print("Area of square:", sq.calculate_area())
-print("Area of triangle:", tri.calculate_area())
+for obj in (sq, tri):
+    print("Area:", obj.calculate_area())
