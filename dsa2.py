@@ -179,19 +179,19 @@ obj_4.feature_3()
 class Square:
     side = 5
 
-    def calculate_area_sq(self):
+    def calculate_area(self):
         return self.side * self.side
     
 class Triangle:
     base = 5
     height = 4
 
-    def calculate_area_tri(self):
+    def calculate_area(self):
         return 0.5 * self.base * self.height
     
 sq = Square()
 tri = Triangle()
 
 new_line()
-print("Area of square:", sq.calculate_area_sq())
-print("Area of triangle:", tri.calculate_area_tri())
+print("Area of square:", sq.calculate_area())
+print("Area of triangle:", tri.calculate_area())
