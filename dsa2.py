@@ -174,3 +174,24 @@ obj_4 = ChildClass_4()
 obj_4.feature_1()
 obj_4.feature_2()
 obj_4.feature_3()
+
+# Polymorphism
+class Square:
+    side = 5
+
+    def calculate_area_sq(self):
+        return self.side * self.side
+    
+class Triangle:
+    base = 5
+    height = 4
+
+    def calculate_area_tri(self):
+        return 0.5 * self.base * self.height
+    
+sq = Square()
+tri = Triangle()
+
+new_line()
+print("Area of square:", sq.calculate_area_sq())
+print("Area of triangle:", tri.calculate_area_tri())
