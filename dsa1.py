@@ -20,3 +20,8 @@ def bubble_sort(arr):
             if arr[j] > arr[j + 1]:
                 arr[j], arr[j + 1] = arr[j + 1], arr[j]
     return arr
+
+test_list = [64, 34, 25, 12, 22, 11, 90]
+print("\nOriginal list:", test_list)
+print("Searching for 25:", linear_search(test_list, 25))
+print("Sorted list:", bubble_sort(test_list.copy()))
