@@ -111,3 +111,21 @@ obj = ChildClass()
 obj.feature_1()
 obj.feature_2()
 obj.feature_3()
+
+# Mulitiple Inheritance
+class ParentClass_1:
+    def feature_1(self):
+        print('feature_1 from ParentClass_1 is running...')
+
+class ParentClass_2:
+    def feature_2(self):
+        print('feature_2 from ParentClass_2 is running...')
+
+class ChildClass_2(ParentClass_1, ParentClass_2):
+     def feature_3(self):
+         print('feature_3 from ChildClass is running...')
+    
+obj_2 = ChildClass_2()
+obj_2.feature_1()
+obj_2.feature_2()
+obj_2.feature_3()
