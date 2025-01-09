@@ -73,7 +73,7 @@ local()
 print(f)
 
 class Student:
-    name = "Student"
+    names = "Student"
     def __init__(self, a, b):
         self.a = a
         self.b = b
@@ -83,8 +83,31 @@ class Student:
     
     @classmethod
     def info(cls):
-        return cls.name
+        return cls.names
+    
+    @staticmethod
+    def info_1():
+        return "This is a student class"
     
 sl = Student(10, 20)
 print(sl.avg())
 print(Student.info())
+print(Student.info_1())
+
+
+# Single Inheritance
+class ParentClass:
+    def feature_1(self):
+        print('feature_1 from ParentClass is running...')
+
+    def feature_2(self):
+        print('feature_2 from ParentClass is runnning....')
+    
+class ChildClass(ParentClass):
+    def feature_3(self):
+        print('feature_3 from ChildClass is running...')
+
+obj = ChildClass()
+obj.feature_1()
+obj.feature_2()
+obj.feature_3()
