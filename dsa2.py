@@ -94,6 +94,9 @@ print(sl.avg())
 print(Student.info())
 print(Student.info_1())
 
+def new_line():
+    for i in range(4):
+        print("\n")
 
 # Single Inheritance
 class ParentClass:
@@ -111,6 +114,8 @@ obj = ChildClass()
 obj.feature_1()
 obj.feature_2()
 obj.feature_3()
+
+new_line()
 
 # Mulitiple Inheritance
 class ParentClass_1:
@@ -130,6 +135,8 @@ obj_2.feature_1()
 obj_2.feature_2()
 obj_2.feature_3()
 
+new_line()
+
 # Multi Level Inheritance
 class ParentClass_2:
     def feature_1(self):
@@ -147,3 +154,23 @@ obj_3 = ChildClass_3()
 obj_3.feature_1()
 obj_3.feature_2()
 obj_3.feature_3()
+
+new_line()
+
+# Heirarchical Inheritance
+class ParentClass_3:
+    def feature_1(self):
+        print('feature_1 from ParentClass_3 is running....')
+
+class ParentClass_4: 
+    def feature_2(self):
+        print('feature_2 from ParentClass_4 is running...')
+
+class ChildClass_4(ParentClass_3, ParentClass_4):
+    def feature_3(self):
+        print('feature_3 from ChildClass_4 is running...')
+
+obj_4 = ChildClass_4()
+obj_4.feature_1()
+obj_4.feature_2()
+obj_4.feature_3()
