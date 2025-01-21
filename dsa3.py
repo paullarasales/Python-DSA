@@ -7,20 +7,20 @@ class Dog:
     # Instance Method
     def description(self):
         return  f"{self.name} is {self.age} years old"
-    
+
     def speak(self, sound):
+        return f"{self.name} barks: {sound}"
+    
+class JackTheRusselTerrier(Dog):
+    def speak(self, sound="Arf"):
         return f"{self.name} says {sound}"
 
-miles = Dog("Miles", 4)
-buddy = Dog("Buddy", 9)
+class Bulldog(Dog):
+    def speak(self, sound="Worf"):
+        return super().speak(sound)
 
-print(miles.description())
-print(miles.speak("Arf Arf"))
-
-names = ["Miles", "Buddy", "Jack"]
-print(names)
-print(miles)
-
+buddy = Bulldog("Buddy", 9)
+print(buddy.speak())
 # Exercice 1
 # Create a Car Class
 class Car:
@@ -36,3 +36,27 @@ car_2 = Car("Red", 30000)
 
 print(car_1.describe())
 print(car_2.describe())
+
+
+# Exercise 2
+class Cat:
+    species = "Russian"
+    
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def __str__(self):
+        return f"{self.name} is {self.age} years old"
+    
+    def speak(self, sound):
+        return f"{self.name} says {sound}"
+
+
+class Ascat(Cat):
+    def speak(self, sound="Meow"):
+        return super().speak(sound)
+
+
+kitty = Ascat("Kitty", 2)
+print(kitty.speak())
