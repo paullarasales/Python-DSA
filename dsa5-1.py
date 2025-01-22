@@ -4,7 +4,7 @@ def new_line():
     for i in range(1):
         print("\n")
 
-array1 = array('i', [10, 20, 30, 40, 50])
+array1 = array('i', [10, 20, 30, 40, 50]) 
 array1.insert(1, 60)
 for x in array1:
     print(x)
@@ -35,7 +35,7 @@ else:
     
 
 binary_list = [12, 24, 32, 39, 45, 50, 54]
-n = 45
+n = 54
 # setting two pointer low & high
 # Iterative Binary Search Function method Python Implementation
 # It returns index of n in given list if present
