@@ -44,25 +44,22 @@ n = 45
 def binary_search(list, n):
     low = 0
     high = len(list) - 1
-    mid = 0
 
     while low <= high:
-        # for get integer result
+        # Calculate the mid index
         mid = (high + low) // 2
 
-        # Check if n is present at mid
+        # 1st Comparison: Is list[mid] less than n
         if list[mid] < n:
-            low = mid + 1
+            low = mid + 1 # Ignore the left half
 
-        # If n is greater, compare to the right of mid
+        # 2nd Comparison: Is list[mid] greater than n
         elif list[mid] > n:
             high = mid - 1
 
-        # If n is smaller, compared to the left of mid
+        # 3rd Comparison: Is list[mid] equal to n
         else:
-            return mid
-            
-        # element was not present in the list, return -1
+            return mid        
     return -1
 
 res = binary_search(binary_list, n)
