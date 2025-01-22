@@ -33,3 +33,41 @@ if result != -1:
 else:
     print("Element not found..")
     
+
+binary_list = [12, 24, 32, 39, 45, 50, 54]
+n = 45
+# setting two pointer low & high
+# Iterative Binary Search Function method Python Implementation
+# It returns index of n in given list if present
+# else return -1
+
+def binary_search(list, n):
+    low = 0
+    high = len(list) - 1
+    mid = 0
+
+    while low <= high:
+        # for get integer result
+        mid = (high + low) // 2
+
+        # Check if n is present at mid
+        if list[mid] < n:
+            low = mid + 1
+
+        # If n is greater, compare to the right of mid
+        elif list[mid] > n:
+            high = mid - 1
+
+        # If n is smaller, compared to the left of mid
+        else:
+            return mid
+            
+        # element was not present in the list, return -1
+    return -1
+
+res = binary_search(binary_list, n)
+
+if res != -1:
+    print("Element is present at index", str(res))
+else:
+    print("Element is not present in binary_list")
